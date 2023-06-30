@@ -1,26 +1,38 @@
-#  Как работать с репозиторием финального задания
+Проект Kittygram – форум для публикации котов, где можно выбрать их цвет, год рождения, загрузить фото и присвоить им какие-либо достижения. 
+kittygram_domain: https://naprimerrrkittygram.ddns.net/
 
-## Что нужно сделать
+Проект Taski – приложение для постановки задач. 
+taski_domain: https://taskinaprimerrr.ddns.net/
+ 
+## Технологии 
+1. Python 3.10.6 
+2. Django==3.2.3 
+3. djangorestframework==3.12.4 
+4. djoser==2.1.0 
+5. gunicorn 20.1.0 
+6. Docker
 
-Настроить запуск проекта Kittygram в контейнерах и CI/CD с помощью GitHub Actions
+## Как локально развернуть проект 
 
-## Как проверить работу с помощью автотестов
+А нужен ли мне тут этот блок вообще?
+Если нужен, добавлю
 
-В корне репозитория создайте файл tests.yml со следующим содержимым:
-```yaml
-repo_owner: ваш_логин_на_гитхабе
-kittygram_domain: полная ссылка (https://доменное_имя) на ваш проект Kittygram
-taski_domain: полная ссылка (https://доменное_имя) на ваш проект Taski
-dockerhub_username: ваш_логин_на_докерхабе
-```
+## Шаблон наполнения env-файла 
 
-Скопируйте содержимое файла `.github/workflows/main.yml` в файл `kittygram_workflow.yml` в корневой директории проекта.
+``` 
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+DB_HOST=
+DB_PORT=
+SECRET_KEY=
+``` 
 
-Для локального запуска тестов создайте виртуальное окружение, установите в него зависимости из backend/requirements.txt и запустите в корневой директории проекта `pytest`.
+## Автор 
 
-## Чек-лист для проверки перед отправкой задания
+[Олег Призов](https://github.com/OlegPrizov) 
 
-- Проект Taski доступен по доменному имени, указанному в `tests.yml`.
-- Проект Kittygram доступен по доменному имени, указанному в `tests.yml`.
-- Пуш в ветку main запускает тестирование и деплой Kittygram, а после успешного деплоя вам приходит сообщение в телеграм.
-- В корне проекта есть файл `kittygram_workflow.yml`.
+repo_owner: OlegPrizov
+kittygram_domain: https://naprimerrrkittygram.ddns.net/
+taski_domain: https://taskinaprimerrr.ddns.net/
+dockerhub_username: olegprizov
