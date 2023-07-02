@@ -11,7 +11,8 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'default_value')
 
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split("_")
+ALLOWED_HOSTS = ['130.193.34.124', '127.0.0.1', 'localhost', 'naprimerrrkittygram.ddns.net']
+#ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split("_")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
